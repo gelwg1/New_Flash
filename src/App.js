@@ -10,12 +10,14 @@ function App() {
     
     <Router>
       <Nav />
+      <div class="container">
       <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route path="/createcard" element={<CreateCard />} />
-        <Route path="/library" element={<Library />} />
-        <Route path="/practice" element={<Practice />} />
+        <Route exact path="/New_Flash" element={<Homepage />} />
+        <Route path="/New_Flash/createcard" element={<CreateCard />} />
+        <Route path="/New_Flash/library" element={<Library />} />
+        <Route path="/New_Flash/practice" element={<Practice />} />
       </Routes>
+      </div>
     </Router>
     
   );
