@@ -22,11 +22,10 @@ export default function CreateCard() {
   return (
     <div style={{ textAlign: "center" }}>
       <Card
-        className="text-center"
+        className="text-center mb-2"
         bg={"secondary"}
         text={"secondary" === "light" ? "dark" : "white"}
         style={{ width: "50%", height: "100%", margin: "25px auto" }}
-        className="mb-2"
       >
         <Card.Header
           style={{
