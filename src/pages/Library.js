@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { onSnapshot, collection, doc, deleteDoc } from "firebase/firestore";
 import ChangeCardPopup from "../components/ChangeCardPopup";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 export default function Library() {
   const [cards, setCards] = useState([]);
@@ -18,27 +18,50 @@ export default function Library() {
     );
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexFlow: "wrap",
+      }}
+    >
       {cards.map((card) => {
         return (
-          <div
-            style={{
-              width: "600px",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <h2>{card.front}</h2>
-            <h2>{card.back}</h2>
-            <ChangeCardPopup id={card.id} front={card.front} back={card.back} />
-            <Button
-              onClick={() => {
-                deleteUser(card.id);
-              }}
+          <>
+            <Card
+              bg="secondary"
+              text="white"
+              style={{ width: "30%", margin: "15px 0px" }}
             >
-              Xóa thẻ
-            </Button>
-          </div>
+              <Card.Body>
+                <Card.Title>Mặt trước </Card.Title>
+                <Card.Text>{card.front}</Card.Text>
+                <Card.Title>Mặt sau</Card.Title>
+                <Card.Text>{card.back}</Card.Text>
+              </Card.Body>
+              <div
+                style={{
+                  height: "50px",
+                  display: "flex",
+                  justifyContent: "space-around",
+                }}
+              >
+                <ChangeCardPopup
+                  id={card.id}
+                  front={card.front}
+                  back={card.back}
+                />
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    deleteUser(card.id);
+                  }}
+                >
+                  Xóa thẻ{" "}
+                </Button>
+              </div>
+            </Card>
+          </>
         );
       })}
     </div>

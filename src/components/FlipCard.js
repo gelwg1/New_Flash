@@ -42,10 +42,10 @@ export const FlashcardComponent = ({ dataSource = [], flipDirection, onSound, on
       {
         isFinish ? (
           <div style={Styles.finishContainer}>
-            <h2 style={{ marginTop: 0, marginBottom: 10, color:"#B5C689" }}>Nice work!</h2>
-            <p style={{ margin: 0 , color:"#ffffff"  }}>You just studied {dataSource.length} term!</p>
-            <button style={Styles.startOverButton} onClick={handleStartOver}>Start over</button>
-            <button style={Styles.startOverButton} onClick={onFinish}>Finish</button>
+            <h2 style={{ marginTop: 0, marginBottom: 10, color:"#B5C689" }}>Chúc mừng!</h2>
+            <p style={{ margin: 0 , color:"#ffffff"  }}>Bạn vừa học xong {dataSource.length} câu!</p>
+            <button style={Styles.startOverButton} onClick={handleStartOver}>Bắt đầu lại</button>
+            <button style={Styles.startOverButton} onClick={onFinish}>Kết thúc</button>
           </div>
         ) : (
           <div>

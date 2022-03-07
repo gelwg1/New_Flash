@@ -17,7 +17,7 @@ export default function Dashboard() {
                   </h6>
                       <br />
                       
-                      <h6><Link className="btn btn-dark start start-two" to="/New_Flash/createcard">Get Started</Link></h6>
+                      <h6><Link className="btn btn-dark start start-two" to="/New_Flash/createcard">Bắt đầu ngay</Link></h6>
                   </div>
                   <div className="col-sm-8 showcase-img">
                       {/* <div className="circle"></div> */}

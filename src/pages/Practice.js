@@ -18,7 +18,7 @@ export default function Practice() {
   }, []);
 
   return (
-    <div class="container">
+    <div class="container" style={{margin:"10px auto"}}>
       <FlashcardComponent dataSource={cards}/>
     </div>
   );
