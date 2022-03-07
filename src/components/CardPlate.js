@@ -3,7 +3,7 @@ import { Button, Card, FormControl, InputGroup } from "react-bootstrap";
 
 export default function CardPlate() {
   return (
-      <Card
+      <Card      
         className="text-center"
         bg={"light"}
         text={"light" === "light" ? "dark" : "white"}

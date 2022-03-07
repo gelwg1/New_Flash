@@ -29,6 +29,7 @@ export default function Library() {
         return (
           <>
             <Card
+              className="text-center"
               bg="secondary"
               text="white"
               style={{ width: "30%", margin: "15px 0px" }}

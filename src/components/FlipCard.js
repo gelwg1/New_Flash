@@ -158,7 +158,7 @@ const Styles = {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    fontSize: "1.5rem",
+    fontSize: "3.5rem",
   },
   soundButton: {
     position: "absolute",
