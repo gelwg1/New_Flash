@@ -62,13 +62,13 @@ export const FlashcardComponent = ({ dataSource = [], flipDirection, onSound, on
                 <ReactCardFlip containerStyle={{ height: "100%" }} isFlipped={side === "back"} flipDirection={flipDirection}>
                   <div style={Styles.cardContent}>
                     {
-                      dataSource[step - 1]?.front?.image && <img width="40%" height="40%" src={dataSource[step - 1]?.front?.image} />
+                      dataSource[step - 1]?.front?.image && <img alt="" width="40%" height="40%" src={dataSource[step - 1]?.front?.image} />
                     }
                     <p>{dataSource[step - 1]?.front?.text}</p>
                   </div>
                   <div style={Styles.cardContent}>
                     {
-                      dataSource[step - 1]?.back?.image && <img width="40%" height="40%" src={dataSource[step - 1]?.back?.image} />
+                      dataSource[step - 1]?.back?.image && <img alt="" width="40%" height="40%" src={dataSource[step - 1]?.back?.image} />
                     }
                     <p>{dataSource[step - 1]?.back?.text}</p>
                   </div>
@@ -77,10 +77,10 @@ export const FlashcardComponent = ({ dataSource = [], flipDirection, onSound, on
             </div>
             <div style={Styles.navigation}>
               <div style={Styles.prevButton} onClick={handlePrev}>
-                <img width="200%" height="200%" src="https://cdn-icons-png.flaticon.com/512/892/892650.png" />
+                <img width="200%" height="200%" src="https://cdn-icons-png.flaticon.com/512/892/892650.png" alt=""/>
               </div>
               <div style={Styles.nextButton} onClick={handleNext}>
-                <img width="200%" height="200%" src="https://cdn-icons-png.flaticon.com/512/892/892666.png" />
+                <img width="200%" height="200%" src="https://cdn-icons-png.flaticon.com/512/892/892666.png" alt=""/>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { onSnapshot, collection } from "firebase/firestore";
 import { FlashcardComponent } from "../components/FlipCard";
-import { Navigate } from "react-router-dom";
 
 export default function Practice() {
   const [cards, setCards] = useState([]);
